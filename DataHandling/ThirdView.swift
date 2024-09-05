@@ -14,25 +14,32 @@ struct ThirdView: View {
     @State private var isVisible = false
     
     var body: some View {
-        VStack {
-            Text("Second View")
-                .foregroundColor(.gray)
-            
-            if modelData.landmarks.count > 3{
-                Text(modelData.landmarks[3].name)
-                    .font(.title)
-                    .opacity(isVisible ? 1 : 0) // Animate opacity
-                    .offset(y: isVisible ? 0 : 20) // Animate position (y-axis)
-                    .animation(.easeInOut(duration: 0.75), value: isVisible) // Apply animation
-            } else {
-                Text("No landmarks available")
+        
+        NavigationView{
+            VStack {
+                Text("Second View")
+                    .foregroundColor(.gray)
+                
+                if modelData.landmarks.count > 3{
+                    Text(modelData.landmarks[3].name)
+                        .font(.title)
+                        .opacity(isVisible ? 1 : 0) // Animate opacity
+                        .offset(y: isVisible ? 0 : 20) // Animate position (y-axis)
+                        .animation(.easeInOut(duration: 0.75), value: isVisible) // Apply animation
+                } else {
+                    Text("No landmarks available")
+                }
+                
+                NavigationLink(destination: HikeDetails()){
+                    Text("available hikes")
+                }
+                .navigationTitle("Third View")
             }
-            
-        }
-        .onAppear {
-            // Trigger animation when the view appears
-            withAnimation {
-                isVisible = true
+            .onAppear {
+                // Trigger animation when the view appears
+                withAnimation {
+                    isVisible = true
+                }
             }
         }
     }

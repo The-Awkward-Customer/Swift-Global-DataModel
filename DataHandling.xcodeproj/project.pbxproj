@@ -24,6 +24,7 @@
 		B8F847BE2C89EE4E00F905FE /* hikeData.json in Resources */ = {isa = PBXBuildFile; fileRef = B8F847B12C89E84F00F905FE /* hikeData.json */; };
 		B8F847BF2C89EE4F00F905FE /* hikeData.json in Resources */ = {isa = PBXBuildFile; fileRef = B8F847B12C89E84F00F905FE /* hikeData.json */; };
 		B8F847C02C89EE5100F905FE /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = B8F847B22C89E84F00F905FE /* landmarkData.json */; };
+		B8F847C22C89F89400F905FE /* HikeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F847C12C89F89400F905FE /* HikeDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		B8F847B62C89E8A400F905FE /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		B8F847B82C89E98800F905FE /* Hike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hike.swift; sourceTree = "<group>"; };
 		B8F847BB2C89EA0600F905FE /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		B8F847C12C89F89400F905FE /* HikeDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				B8F847832C89E63500F905FE /* ContentView.swift */,
 				B8F847AD2C89E72100F905FE /* SecondView.swift */,
 				B8F847AF2C89E72A00F905FE /* ThirdView.swift */,
+				B8F847C12C89F89400F905FE /* HikeDetails.swift */,
 				B8F847AB2C89E71400F905FE /* FirstView.swift */,
 				B8F847852C89E63900F905FE /* Assets.xcassets */,
 				B8F847872C89E63900F905FE /* Preview Content */,
@@ -306,6 +309,7 @@
 				B8F847842C89E63500F905FE /* ContentView.swift in Sources */,
 				B8F847B02C89E72A00F905FE /* ThirdView.swift in Sources */,
 				B8F847AC2C89E71400F905FE /* FirstView.swift in Sources */,
+				B8F847C22C89F89400F905FE /* HikeDetails.swift in Sources */,
 				B8F847B92C89E98800F905FE /* Hike.swift in Sources */,
 				B8F847AE2C89E72200F905FE /* SecondView.swift in Sources */,
 				B8F847BC2C89EA0600F905FE /* ModelData.swift in Sources */,
