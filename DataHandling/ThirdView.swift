@@ -9,20 +9,35 @@ import SwiftUI
 struct ThirdView: View {
     
     // Access the shared ModelData using @EnvironmentObject
-        @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var modelData: ModelData
+    
+    @State private var isVisible = false
     
     var body: some View {
         VStack {
-                    Text("Second View")
-                    
+            Text("Second View")
+                .foregroundColor(.gray)
+            
             if modelData.landmarks.count > 3{
                 Text(modelData.landmarks[3].name)
                     .font(.title)
-                    } else {
-                        Text("No landmarks available")
-                    }
-                }
+                    .opacity(isVisible ? 1 : 0) // Animate opacity
+                    .offset(y: isVisible ? 0 : 20) // Animate position (y-axis)
+                    .animation(.easeInOut(duration: 0.75), value: isVisible) // Apply animation
+            } else {
+                Text("No landmarks available")
             }
+            
+        }
+        .onAppear {
+            // Trigger animation when the view appears
+            withAnimation {
+                isVisible = true
+            }
+        }
+    }
+    
+    
 }
 
 struct Third_Preview: PreviewProvider {
