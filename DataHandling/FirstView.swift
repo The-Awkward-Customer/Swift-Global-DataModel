@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct FirstView: View {
+    
+    // Access the shared ModelData using @EnvironmentObject
+    @EnvironmentObject var modelData: ModelData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("First View")
+            
+            if modelData.landmarks.count > 1{
+                Text(modelData.landmarks[1].name)
+                    .font(.title)
+            } else {
+                Text("No landmarks available")
+            }
+        }
     }
 }
 
-#Preview {
-    FirstView()
+
+
+struct FirstView_Preview: PreviewProvider {
+    static var previews: some View {
+        FirstView()
+            .environmentObject(ModelData()) // Inject the model data for previews
+    }
 }
